@@ -17,7 +17,7 @@ export class HomeUpcomingClassesComponent {
     loop: true,
     dots: false,
     autoplay: true,
-    margin: 50,
+    margin: 15,
     nav: true,
     navText: [
       '<i class="fa fa-angle-left" aria-hidden="true"></i>',

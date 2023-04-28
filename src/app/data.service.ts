@@ -65,4 +65,16 @@ export class DataService {
   getAllBookings(id: any) {
     return this.http.get(this.baseurl + `api/getAllBookings/${id}`);
   }
+
+  markAttendance(data: any) {
+    return this.http.post(this.baseurl + 'api/markAttendance', data);
+  }
+
+  getAttendance(id: any) {
+    return this.http.get(this.baseurl + 'api/getAttendanceSingle/' + id);
+  }
+
+  getOpenClasses() {
+    return this.http.get(this.baseurl + 'api/getOpenClasses');
+  }
 }
