@@ -1,0 +1,65 @@
+<div class="container-fluid color-dena">
+  <div class="container3">
+    <h2>Upcoming classes &rarr;</h2>
+
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let i of classList">
+        <div>
+          <div class="carousel-cell1">
+            <div class="content-svg-text1">
+              <img style="width: unset !important" [src]="i.img" alt="" />
+              <div class="orange-black-text">
+                <h2>{{ i.txt1 }}</h2>
+                <p>{{ i.txt2 }}</p>
+                <p>{{ i.dateTime }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+    <!-- <div
+      class="carousel jhdfj"
+      data-flickity='{ "wrapAround": true ,"pageDots":false  }'
+    >
+      <div class="carousel-cell1" *ngFor="let i of classList">
+        <div class="content-svg-text1">
+          <img [src]="i.img" alt="" />
+          <div class="orange-black-text">
+            <h2>{{ i.txt1 }}</h2>
+            <p>{{ i.txt2 }}</p>
+            <p>{{ i.dateTime }}</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <h2 style="padding-top: 47px; padding-bottom: 17px">
+      Upcoming Workshopes &rarr;
+    </h2>
+    <!-- <div
+      class="carousel jhdfj"
+      data-flickity='{ "wrapAround": true , "pageDots":false  } '
+    >
+      <div class="carousel-cell1" *ngFor="let i of workshopList">
+        <div class="content-svg-text1">
+          <img [src]="i.img" alt="" />
+          <h4>{{ i.txt }}</h4>
+        </div>
+      </div>
+    </div> -->
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let i of workshopList">
+        <div>
+          <div class="carousel-cell1">
+            <div class="content-svg-text1">
+              <div class="content-svg-text1">
+                <img [src]="i.img" alt="" />
+                <h4>{{ i.txt }}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>

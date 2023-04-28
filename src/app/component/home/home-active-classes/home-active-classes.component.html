@@ -1,0 +1,33 @@
+<!-- <div class="container-fluid img-33">
+  <div class="container2">
+    <h2>Upcoming Events &rarr;</h2>
+    <div class="carousel" data-flickity='{ "wrapAround": true}'>
+      <div
+        class="carousel-cell bindu-img1"
+        *ngFor="let i of classList"
+        [style]="'background:url(' + i.bgImg + ')'"
+      >
+        <div class="content-svg-text">
+          <img [src]="i.img" alt="" />
+          <h2>{{ i.day }}</h2>
+          <h2>{{ i.time }}</h2>
+        </div>
+        <h3 data-text="Featured Class">{{ i.featureTxt }}</h3>
+      </div>
+    </div>
+  </div>
+</div> -->    
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let i of classList">
+    <div
+      class="carousel-cell bindu-img1"
+      [style]="'background:url(' + i.bgImg + ')'"
+    >
+      <div class="content-svg-text">
+        <img [src]="i.img" alt="" />
+        <h2>{{ i.day }}</h2>
+        <h2>{{ i.time }}</h2>
+      </div>
+    </div>
+  </ng-template>
+</owl-carousel-o>
